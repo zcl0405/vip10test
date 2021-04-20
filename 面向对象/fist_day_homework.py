@@ -21,18 +21,24 @@ cat1.eat_fish()#cat1对象调用实例方法
 class people():
     def __init__(self, weight):
         self.weight = weight
+        self.new_weight=weight
+    def __str__(self):
+        return f'体重是{self.weight}'
+    def run(self,n):
+        self.new_weight=self.new_weight-n
+        print(f'跑步{n}后体重是{self.new_weight}')
+    def eat(self,m):
+        self.new_weight=self.new_weight+m
+        print(f'吃饭{m}次后体重是{self.new_weight}')
 
-    def run(self):
-        print('体重减少了一公斤')
-
-    def eat(self):
-        print('体重增加了1公斤')
 xiaomei = people(75.0)
 xiaoming = people(45.0)
-xiaomei.eat()
-xiaomei.run()
-xiaoming.run()
-xiaoming.eat()
+print(xiaoming)
+xiaoming.run(2)
+xiaoming.eat(2)
+print(xiaomei)
+xiaomei.run(3)
+xiaomei.eat(1)
 
 '''
 需要定义两个类,一个是房子类,一个是家具类, 房子的属性有:户型和总面积,和家具列表
@@ -47,7 +53,7 @@ class Home():
     def __init__(self,type,area):
         self.type=type#户型
         self.a=area#房屋面积
-        self.left=area#剩余面积
+        self.left=area#剩余面积,剩余面积和房屋面积最开始是一样的,
         self.furniture=[]#家具列表
     def __str__(self):
         return f'房子的户型是{self.type},房子的总面积是{self.a},房子的剩余面积是{self.left},家具名称列表是{self.furniture}'
@@ -57,10 +63,10 @@ class Home():
             self.furniture.append(item.name)
             self.left=self.left-item.area
 home=Home('两室一厅',100)#创建对象
-bed=Furniture('床',4)#
-home.add_furniture(bed)
-cabinet=Furniture('衣柜',2)
-home.add_furniture(cabinet)
+bed=Furniture('床',4)#创建床这个对象
+home.add_furniture(bed)#家这个对象调用添加家具的实例方法
+cabinet=Furniture('衣柜',2)#创建衣柜这个对象
+home.add_furniture(cabinet)#家这个对象调用添加家具的实例方法
 table=Furniture('餐桌',1.5)
 home.add_furniture(table)
 print(home)
