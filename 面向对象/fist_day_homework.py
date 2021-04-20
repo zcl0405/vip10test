@@ -37,7 +37,7 @@ print(xiaoming)
 xiaoming.run(2)
 xiaoming.eat(2)
 print(xiaomei)
-xiaomei.run(3)
+xiaomei.run(2)
 xiaomei.eat(1)
 
 '''
