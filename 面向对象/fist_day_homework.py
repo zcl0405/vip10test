@@ -54,6 +54,13 @@ class Home():
 
     def add_furniture(self,item):
         if self.left>item.area:
-            self.furniture.append(item.area)
+            self.furniture.append(item.name)
             self.left=self.left-item.area
-
+home=Home('两室一厅',100)#创建对象
+bed=Furniture('床',4)#
+home.add_furniture(bed)
+cabinet=Furniture('衣柜',2)
+home.add_furniture(cabinet)
+table=Furniture('餐桌',1.5)
+home.add_furniture(table)
+print(home)
