@@ -7,11 +7,10 @@
 
 # class washer():
 #     def print_info(self):
+            #类的里面获取实例属性
 #         print(f'haire1洗衣机的宽度是{self.width}')
-#
-#
-# haier1 = washer()
-# haier1.width = 500
+# haier1 = washer()#创建对象
+# haier1.width = 500#添加实例属性
 # haier2=washer()
 # haier2.width=600
 #
@@ -20,7 +19,7 @@
 # haier2.print_info()
 
 # class washer():
-#     def __init__(self):
+#     def __init__(self):#魔法方法初始化方法
 #         self.width=500
 #         self.height=800
 #     def print_info(self):
