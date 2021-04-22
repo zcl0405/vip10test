@@ -70,3 +70,21 @@ home.add_furniture(cabinet)#家这个对象调用添加家具的实例方法
 table=Furniture('餐桌',1.5)
 home.add_furniture(table)
 print(home)
+'''
+士兵是一个类,抢是一个类, 瑞恩是士兵的一个对象,AK47是手枪的一个对象,
+士兵可以开火开火就是一个方法,枪可以发射子弹,发射子弹就是一个方法,枪可以填装子弹,填装子弹也是一个方法
+'''
+class Soldier():
+    def fire(self):
+        print('开火')
+class Gun():
+    def fire_bullet(self):
+        print('发射子弹')
+    def add_bullet(self):
+        print('增加子弹')
+
+ryan=Soldier()
+AK47=Gun()
+AK47.add_bullet()
+AK47.fire_bullet()
+ryan.fire()
