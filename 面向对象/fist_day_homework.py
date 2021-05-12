@@ -81,15 +81,15 @@ class Soldier():
         return f'士兵{self.name}开火'
     def fire(self,item):
         if item.bullet_number>0:
-            item.fire_bullet
+            item.fire_bullet()
         else:
-            item.add_bullet
+            item.add_bullet()
 class Gun():
     def __init__(self,name):
         self.name=name
         self.bullet_number=0
     def __str__(self):
-        return f'制造一把{self.name},还有{self.bullet_number}发子弹'
+        return f'{self.name}还剩{self.bullet_number}发子弹'
     def fire_bullet(self):
         self.bullet_number-=1
         print(f'发射一枚子弹,还剩{self.bullet_number}发')
@@ -102,13 +102,8 @@ s1.fire(gun1)
 # gun1.add_bullet()
 # gun1.fire_bullet()
 print(gun1)
-
-
-
-
-
-
-
+s1.fire(gun1)
+print(gun1)
 
 
 # class Soldier():
